@@ -1,6 +1,6 @@
 <div class="col-md-8 col-md-offset-2">
     <h1> Registrarme</h1>
-    <form [formGroup]="myForm" (ngSubmit)="onSignup()">
+    <form [formGroup]="myForm">
       <div class="form-group">      
           <input 
             type="email" 
@@ -45,6 +45,7 @@
           <button
           class="btn btn-primary"
           type="submit"
+          (click) = "onSignup()"
           [disabled]="!myForm.valid">Registrarme</button>
       </div>
     </form>

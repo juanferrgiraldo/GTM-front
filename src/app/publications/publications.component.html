@@ -1,3 +1,4 @@
+<!--
 <mat-toolbar color="primary">
   <span>Fotos</span>
    <span class = "example-spacer"></span>
@@ -13,13 +14,13 @@
 
 <tbody>
   <tr *ngFor="let book of books">
-    <td>{{ post.description }}</td>
+    <td>{{ myData.url }}</td>
     <td>Show Detail</td>
   </tr>
 </tbody>
-
-<!--       
-<mat-card *ngFor = "let data of (myData ? myData: []); let i = index">
+-->
+       
+<mat-card *ngFor = "let data of (myData ? myData.slice(0,20): []); let i = index">
   <img mat-card-image src="{{ data.url }}">
   <img mat-card-image src="{{ data.image }}">
   <mat-card-header>
@@ -28,7 +29,7 @@
     </mat-card-title>
   </mat-card-header>
 
-  <mat-card-actions>
+  <!--<mat-card-actions>
   <button mat-button>
   <mat-icon>comment-multiple-outline</mat-icon> 
   Comentar
@@ -37,7 +38,6 @@
   <mat-icon>share-variant</mat-icon> 
   Compartir
   </button>
-  </mat-card-actions>
+  </mat-card-actions>-->
 
 </mat-card>
--->

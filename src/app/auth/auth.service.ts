@@ -12,7 +12,14 @@ export class AuthService {
     signup(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});  // To let backend know that frontend are gettin JSON data.
-        return this.http.post('http:localhost:3001/signup', body, {headers: headers})
+        return this.http.post('http://localhost:3001/gtm/signup', body, {headers: headers})
+            .map((res: Response) => res.json())
+            .catch((err: Response) => Observable.throw(err.json()));
+    }
+    signin(user: User) {
+        const body = JSON.stringify(user);
+        const headers = new Headers({'Content-Type': 'application/json'});  // To let backend know that frontend are gettin JSON data.
+        return this.http.post('http://localhost:3001/gtm/signin', body, {headers: headers})
             .map((res: Response) => res.json())
             .catch((err: Response) => Observable.throw(err.json()));
     }

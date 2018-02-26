@@ -1,0 +1,8 @@
+{
+  "/gtm": {
+    "target": "http://localhost:3001/gtm",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
