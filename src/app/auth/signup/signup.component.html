@@ -1,0 +1,51 @@
+<div class="col-md-8 col-md-offset-2">
+    <h1> Registrarme</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSignup()">
+      <div class="form-group">      
+          <input 
+            type="email" 
+            id="email"
+            class="form-control"
+            placeholder="Email"             
+            formControlName="email">      
+      </div>
+      <div class="form-group">      
+          <input 
+          type="text" 
+          id="name"
+          class="form-control" 
+          placeholder="Nombres y Apellidos"          
+          formControlName="name">      
+      </div>
+      <div class="form-group">      
+          <input 
+          type="text" 
+          id="user"
+          class="form-control" 
+          placeholder="Nombre de usuario"          
+          formControlName="user">
+      </div>      
+      <div class="form-group">        
+          <input 
+          type="password" 
+          id="password"
+          class="form-control" 
+          placeholder="Contraseña"          
+          formControlName="password">
+      </div>
+      <div class="form-group">        
+          <input 
+          type="password" 
+          id="password1"
+          class="form-control"
+          placeholder="Repita Contraseña" 
+          name="password1">
+      </div>
+      <div class="row">
+          <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!myForm.valid">Registrarme</button>
+      </div>
+    </form>
+</div>

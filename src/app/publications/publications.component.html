@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <span>Fotos</span>
+   <span class = "example-spacer"></span>
+  <button mat-button [matMenuTriggerFor] = "appmenu">
+    <mat-icon>menu</mat-icon> Menu 
+ </button>  
+</mat-toolbar>
+
+<mat-menu #appmenu= "matMenu">
+  <button mat-menu-item> Configuraciones</button>
+  <button mat-menu-item> Ayuda </button>
+</mat-menu>     
+
+<tbody>
+  <tr *ngFor="let book of books">
+    <td>{{ post.description }}</td>
+    <td>Show Detail</td>
+  </tr>
+</tbody>
+
+<!--       
+<mat-card *ngFor = "let data of (myData ? myData: []); let i = index">
+  <img mat-card-image src="{{ data.url }}">
+  <img mat-card-image src="{{ data.image }}">
+  <mat-card-header>
+    <mat-card-title>
+      <H1>{{data.title}}</H1>      
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-actions>
+  <button mat-button>
+  <mat-icon>comment-multiple-outline</mat-icon> 
+  Comentar
+  </button>
+    <button mat-button>
+  <mat-icon>share-variant</mat-icon> 
+  Compartir
+  </button>
+  </mat-card-actions>
+
+</mat-card>
+-->
