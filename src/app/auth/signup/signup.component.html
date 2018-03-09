@@ -1,13 +1,14 @@
 <div class="col-md-8 col-md-offset-2">
     <h1> Registrarme</h1>
-    <form [formGroup]="myForm">
+    <form [formGroup]="myForm" (ngSubmit)="onSignup()" #f="ngForm">
       <div class="form-group">      
           <input 
             type="email" 
             id="email"
-            class="form-control"
+            class="form-control"                        
             placeholder="Email"             
-            formControlName="email">      
+            formControlName="email">
+            <!--<span class="help-block" *ngIf="email.valid && email.touhed">Por favor ingrese un email válido</span>-->
       </div>
       <div class="form-group">      
           <input 
@@ -44,9 +45,8 @@
       <div class="row">
           <button
           class="btn btn-primary"
-          type="submit"
-          (click) = "onSignup()"
-          [disabled]="!myForm.valid">Registrarme</button>
+          type="submit"          
+          >Registrarme</button>
       </div>
     </form>
 </div>

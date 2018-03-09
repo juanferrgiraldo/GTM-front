@@ -1,0 +1,37 @@
+<div class="col-md-8 col-md-offset-2">
+  <h1>Publicar</h1>
+  <form [formGroup]="publicateForm" (ngSubmit)="onPublicate()">
+    <div class="form-group">
+        <input
+          type="text"
+          id= "productName"
+          class="form-control"          
+          placeholder="Nombre del producto" 
+          formControlName="productName">
+    </div>
+    <div class="form-group">
+      <select class="form-control" formControlName="type" id="type">
+          <option value="" disabled selected>Elige una categoría</option>
+          <option value="Masculino">Ropa y Accesosrios</option>
+          <option value="Femenino">Deportes</option>
+          <option value="Indefinido">Hogar</option>
+          <option value="Indefinido">Tecnología</option>
+          <option value="Indefinido">Libros</option>
+          <option value="Indefinido">Otros</option>
+        </select>
+        <label>Categoría</label>
+    </div>
+    <div class="form-group">
+        <input 
+          type="text"
+          id="description"
+          class="form-control"
+          placeholder="Descripción del producto" 
+          formControlName="description">
+    </div>
+    <button 
+      class="btn btn-primary" 
+      type="submit">
+      Publicar</button>
+  </form>
+</div>

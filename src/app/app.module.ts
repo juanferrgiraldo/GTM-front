@@ -17,12 +17,16 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LeftComponent } from './left/left.component';
 import { RightComponent } from './right/right.component';
-import { PublicationsComponent } from './publications/publications.component';
-import { PublicateComponent } from './publicate/publicate.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
+// import { PublicationModule } from './publishing/publication.module';
+import { PublicacionesComponent } from './publishing/publicaciones/publicaciones.component';
+import { PublicationsComponent } from './publishing/publications/publications.component';
+import { PublicateComponent } from './publishing/publicate/publicate.component';
+import { PublicationService } from './publishing/publication.service';
+
 
 @NgModule({
   declarations: [
@@ -31,10 +35,11 @@ import { AuthService } from './auth/auth.service';
     FooterComponent,
     LeftComponent,
     RightComponent,
-    PublicationsComponent,
-    PublicateComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    PublicacionesComponent,
+    PublicationsComponent,
+    PublicateComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +53,9 @@ import { AuthService } from './auth/auth.service';
     MatCardModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
   ],
-  providers: [AuthService], // Works like a singleton, only one instance for all app.
+  providers: [AuthService, PublicationService], // Works like a singleton, only one instance for all app.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
