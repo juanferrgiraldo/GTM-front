@@ -3,16 +3,14 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { HttpClient } from '@angular/common/http';
 
-import { Constants } from '../../app-constants.component';
-import { Publicaciones1Component } from './publicaciones1/publicaciones1.component';
-import { Publicaciones2Component } from './publicaciones2/publicaciones2.component';
+import {Constants } from '../../../app-constants.component';
 
 @Component({
-  selector: 'app-publicaciones',
-  templateUrl: './publicaciones.component.html',
-  styleUrls: ['./publicaciones.component.css']
+  selector: 'app-publicaciones1',
+  templateUrl: './publicaciones1.component.html',
+  styleUrls: ['./publicaciones1.component.css']
 })
-export class PublicacionesComponent implements OnInit {
+export class Publicaciones1Component implements OnInit {
   api: string;
   myData: Array<any>;
 

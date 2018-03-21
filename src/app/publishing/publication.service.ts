@@ -15,7 +15,7 @@ export class PublicationService {
         publicate(publicate: Publication) {
             const body = JSON.stringify(publicate);
             const headers = new Headers({'Content-Type': 'application/json'});
-            return this.http.post(Constants.API + '/post', body, {headers: headers})
+            return this.http.post(Constants.API1 + '/post', body, {headers: headers})
                 .map((res: Response) => res.json())
                 .catch((err: Response) => Observable.throw(err.json()));
         }

@@ -23,6 +23,8 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 // import { PublicationModule } from './publishing/publication.module';
 import { PublicacionesComponent } from './publishing/publicaciones/publicaciones.component';
+import { Publicaciones1Component } from './publishing/publicaciones/publicaciones1/publicaciones1.component';
+import { Publicaciones2Component } from './publishing/publicaciones/publicaciones2/publicaciones2.component';
 import { PublicationsComponent } from './publishing/publications/publications.component';
 import { PublicateComponent } from './publishing/publicate/publicate.component';
 import { PublicationService } from './publishing/publication.service';
@@ -38,6 +40,8 @@ import { PublicationService } from './publishing/publication.service';
     SignupComponent,
     SigninComponent,
     PublicacionesComponent,
+    Publicaciones1Component,
+    Publicaciones2Component,
     PublicationsComponent,
     PublicateComponent
   ],

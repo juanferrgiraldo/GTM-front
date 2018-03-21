@@ -1,4 +1,4 @@
-<mat-card *ngFor = "let data of (myData ? myData.slice(0,10): []); let i = index">
+<!-- <mat-card *ngFor = "let data of (myData ? myData.slice(0,10): []); let i = index">
   <mat-card-header>    
     <mat-card-title>
       <h2>{{data.productName}}</h2>
@@ -7,5 +7,13 @@
   <img mat-card-image src="{{api + data.image.path }}">
   <label>{{data.image.path}}</label>
   <br>
-  <!-- <label>{{api + data.image.path }}</label>-->
-</mat-card>
+</mat-card> -->
+<div class="row">
+  <div class="col-lg-6">
+    <app-publicaciones1></app-publicaciones1>
+  </div>
+  <div class="col-lg-6">
+    <app-publicaciones2></app-publicaciones2>
+  </div>
+</div>
+
