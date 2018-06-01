@@ -12,20 +12,28 @@ import { Publication } from '../publication.model';
 })
 export class PublicateComponent implements OnInit {
   publicateForm: FormGroup;
+  types: ['Ropa y Accesorios', 'Deportes', 'Hogar', 'Tecnología', 'Libros', 'Otros'];
+  UploadImage: File;
+  type: String;
 
   constructor(private publicationService: PublicationService, private router: Router) { }
 
   onFileSelected(event) {
     console.log(event);
   }
+  /* handleSelector (type: Selec) {
+    this.type =
+  }*/
+  handleFileInput(image: FileList) {
+    this.UploadImage = image.item(0);
+  }
 
  onPublicate() {
   const publication = new Publication(
     this.publicateForm.value.type,
     this.publicateForm.value.productName,
-    this.publicateForm.value.user,
-    this.publicateForm.value.imagePath,
-    this.publicateForm.value.description
+    this.publicateForm.value.description,
+    this.UploadImage
   );
   this.publicationService.publicate(publication)
     .subscribe(
@@ -40,9 +48,8 @@ export class PublicateComponent implements OnInit {
     this.publicateForm = new FormGroup({
       type: new FormControl(null, Validators.required),
       productName: new FormControl(null, Validators.required),
-      user: new FormControl(null, Validators.required),
       description: new FormControl(null, Validators.required),
-      imagePath: new FormControl(null, Validators.required)
+      image: new FormControl(null, Validators.required)
     });
   }
 }

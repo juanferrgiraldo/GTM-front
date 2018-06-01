@@ -12,14 +12,17 @@ import {
   MatIconModule
 } from '@angular/material';
 
+import { AppRoutingModule } from './app-routing.module';
+import { TestModule } from './test/test.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LeftComponent } from './left/left.component';
 import { RightComponent } from './right/right.component';
-import { AppRoutingModule } from './app-routing.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { LogoutComponent } from './auth/logout/logout.component';
 import { AuthService } from './auth/auth.service';
 // import { PublicationModule } from './publishing/publication.module';
 import { PublicacionesComponent } from './publishing/publicaciones/publicaciones.component';
@@ -28,6 +31,7 @@ import { Publicaciones2Component } from './publishing/publicaciones/publicacione
 import { PublicationsComponent } from './publishing/publications/publications.component';
 import { PublicateComponent } from './publishing/publicate/publicate.component';
 import { PublicationService } from './publishing/publication.service';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -43,7 +47,9 @@ import { PublicationService } from './publishing/publication.service';
     Publicaciones1Component,
     Publicaciones2Component,
     PublicationsComponent,
-    PublicateComponent
+    PublicateComponent,
+    LogoutComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,7 @@ import { PublicationService } from './publishing/publication.service';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+    TestModule
   ],
   providers: [AuthService, PublicationService], // Works like a singleton, only one instance for all app.
   bootstrap: [AppComponent]

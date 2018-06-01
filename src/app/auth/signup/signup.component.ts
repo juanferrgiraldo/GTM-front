@@ -11,20 +11,21 @@ import { User } from '../user.model';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  @ViewChild('f') signupForm: NgForm;
-  myForm: FormGroup;
+  // @ViewChild('f') signupForm: NgForm;
+  singupForm: FormGroup;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   onSignup() {
     const user = new User(
-      this.myForm.value.email,
-      this.myForm.value.name,
-      this.myForm.value.user,
-      this.myForm.value.password
+      // this.signupForm.email, // iba en esto
+      this.singupForm.value.email,
+      this.singupForm.value.name,
+      this.singupForm.value.user,
+      this.singupForm.value.password
     );
     // tslint:disable-next-line:no-unused-expression
-    this.myForm.value.password1;
+    this.singupForm.value.password1;
     this.authService.signup(user)
     .subscribe(
       data => {
@@ -33,12 +34,11 @@ export class SignupComponent implements OnInit {
       },
       error => console.error(error)
     );
-    this.myForm.reset();
-    // this.myForm.value.password1.reset();
+    this.singupForm.reset();
   }
 
   ngOnInit() {
-    this.myForm = new FormGroup({
+    this.singupForm = new FormGroup({
       email: new FormControl(null, [
         Validators.required,
         // tslint:disable:max-line-length

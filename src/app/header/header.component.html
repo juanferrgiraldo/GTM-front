@@ -1,6 +1,13 @@
 <div style="text-align:center">
   <img width="300" alt="GTM Logo" src="../assets/GTM.png">
 </div>
+<nav class="navbar navbar-light bg-light justify-content-end">
+  <ul class="nav nav-tabs">
+      <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">Signup</a></li>
+      <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn()"><app-logout></app-logout></li>
+  </ul>    
+</nav>
 <div class="container">
   <div class="row">
     

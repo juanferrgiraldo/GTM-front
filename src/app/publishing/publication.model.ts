@@ -3,7 +3,6 @@ export class Publication {
         public type: string,
         public productName: string,
         public description: string,
-        public user?: string,
-        public imagePath?: string
+        public image: File
     ) {}
 }

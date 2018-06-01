@@ -6,6 +6,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { PublicationsComponent } from './publishing/publications/publications.component';
 import { PublicacionesComponent } from './publishing/publicaciones/publicaciones.component';
 import { PublicateComponent } from './publishing/publicate/publicate.component';
+import { TestComponent } from './test/test.component';
 
 const appRoutes: Routes = [
     // { path: '', redirectTo: 'signup', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     { path: 'publications', component: PublicationsComponent },
     { path: 'publicaciones', component: PublicacionesComponent },
     { path: 'publicate', component: PublicateComponent },
+    { path: 'test', component: TestComponent },
 ];
 
 @NgModule({
