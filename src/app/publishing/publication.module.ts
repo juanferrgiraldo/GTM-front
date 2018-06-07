@@ -11,20 +11,14 @@ import {
     MatIconModule
   } from '@angular/material';
 
-import { PublicacionesComponent } from './publicaciones/publicaciones.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { PublicateComponent } from './publicate/publicate.component';
-import { Publicaciones1Component } from './publicaciones/publicaciones1/publicaciones1.component';
-import { Publicaciones2Component } from './publicaciones/publicaciones2/publicaciones2.component';
 
 
 @NgModule({
     declarations: [
-        PublicacionesComponent,
         PublicationsComponent,
         PublicateComponent,
-        Publicaciones2Component,
-        Publicaciones1Component
     ],
     imports: [
         HttpModule,

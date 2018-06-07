@@ -14,6 +14,7 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { TestModule } from './test/test.module';
+// import { PublicationModule } from './publishing/publication.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,10 +25,6 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { AuthService } from './auth/auth.service';
-// import { PublicationModule } from './publishing/publication.module';
-import { PublicacionesComponent } from './publishing/publicaciones/publicaciones.component';
-import { Publicaciones1Component } from './publishing/publicaciones/publicaciones1/publicaciones1.component';
-import { Publicaciones2Component } from './publishing/publicaciones/publicaciones2/publicaciones2.component';
 import { PublicationsComponent } from './publishing/publications/publications.component';
 import { PublicateComponent } from './publishing/publicate/publicate.component';
 import { PublicationService } from './publishing/publication.service';
@@ -43,9 +40,6 @@ import { TestComponent } from './test/test.component';
     RightComponent,
     SignupComponent,
     SigninComponent,
-    PublicacionesComponent,
-    Publicaciones1Component,
-    Publicaciones2Component,
     PublicationsComponent,
     PublicateComponent,
     LogoutComponent,

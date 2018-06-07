@@ -17,7 +17,6 @@ export class Http2Component implements OnInit {
   constructor(private http: Http) {
     this.api = Constants.API2 + '/';
     this.http.get(this.api).map(res => res.json()).subscribe(res => this.myData = res);
-    console.log(this.myData);
    }
 
   ngOnInit() {
