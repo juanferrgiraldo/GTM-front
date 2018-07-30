@@ -30,6 +30,9 @@ import { PublicateComponent } from './publishing/publicate/publicate.component';
 import { PublicationService } from './publishing/publication.service';
 import { TestComponent } from './test/test.component';
 
+import { FiresigninComponent } from './fireauth/firesignin/firesignin.component';
+import { FiresignupComponent } from './fireauth/firesignup/firesignup.component';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import { TestComponent } from './test/test.component';
     PublicateComponent,
     LogoutComponent,
     TestComponent,
+    FiresigninComponent,
+    FiresignupComponent
   ],
   imports: [
     BrowserModule,
