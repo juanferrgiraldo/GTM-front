@@ -23,12 +23,15 @@ export class FiresignupComponent implements OnInit {
   }
 
   matchPasswords(ac: AbstractControl) {
+    /*jshint -W087 */
+    // debugger;
     const password = ac.get('password').value;
     const repeatPassword = ac.get('repeatPassword').value;
     if (password !== repeatPassword) {
       ac.get('repeatPassword').setErrors({matchPasswords: true});
+    } else {
+      ac.get('repeatPassword').setErrors({matchPasswords: false});
     }
-    ac.get('repeatPassword').setErrors({matchPasswords: false});
   }
 
 }
